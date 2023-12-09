@@ -1,0 +1,30 @@
+{
+  "name": "xmtp-backend",
+  "version": "1.0.0",
+  "description": "Broadcast message backend created using XMTP.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TotalRecallTeam/xmtp-backend.git"
+  },
+  "keywords": [
+    "XMTP",
+    "broadcast",
+    "messaging"
+  ],
+  "author": "SaudxInu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TotalRecallTeam/xmtp-backend/issues"
+  },
+  "homepage": "https://github.com/TotalRecallTeam/xmtp-backend#readme",
+  "dependencies": {
+    "@xmtp/xmtp-js": "^11.2.3",
+    "dotenv": "^16.3.1",
+    "ethers": "^5.7.0"
+  }
+}
