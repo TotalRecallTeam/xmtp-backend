@@ -27,6 +27,21 @@ export async function broadcastMessage(xmtp, broadcast_address_array, message) {
   }
 }
 
+export async function loadMessages(xmtp, address) {
+  if (await isWalletActive(xmtp, address)) {
+    const conversation = await xmtp.conversations.newConversation(address);
+
+    const response = await conversation.messages();
+
+    const messages = [];
+    for (let i = 0; i < response.length; i++) {
+      messages.push(response[i].content);
+    }
+
+    return messages;
+  }
+}
+
 export async function streamMessages(xmtp, address) {
   if (await isWalletActive(xmtp, address)) {
     const conversation = await xmtp.conversations.newConversation(address);
